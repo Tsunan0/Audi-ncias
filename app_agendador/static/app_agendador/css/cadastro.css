@@ -1,0 +1,87 @@
+/* Zerar padrões */
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Adiciona a rolagem suave às âncoras */
+
+html{
+    scroll-behavior: smooth;
+    text-align: center;
+}
+
+nav{
+    color: aliceblue;
+    text-align: center;
+    padding: 6%;
+    font-size: 2vw;
+}
+
+body h1, h2{
+    padding: 15% 0 5% 0;
+    color: whitesmoke;
+    font-size: 7vw;
+    text-align: center;
+}
+
+body h2{
+    padding-bottom: 10%;
+    font-size: 4vw;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-image: url(sala1.jpeg);
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    width: 100%;
+    color: black;
+    position: relative;
+    z-index: 1;
+}
+
+body::after{ /* Torna o BG de body opaco */
+    content: '';
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0.8;
+    z-index: -1;
+}
+
+#formulario input, select{
+    font-size: 2vw;
+    padding: 1%;
+    border-radius: 15px;
+}
+
+#formulario label{
+    text-shadow: 1px 1px 1px black;
+    line-height: 150%;
+    font-size: 3vw;
+    color: wheat;
+    text-align: center;
+}
+
+button {
+    margin: 15% 0 15% 0;
+    font-size: 3vw;
+    padding: 2%;
+    border-radius: 15px;
+}
+
+.botao{
+    margin: 15% 0 15% 0;
+    font-size: 3vw;
+    padding: 2%;
+    border-radius: 15px;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'app_agendador/css/lista.css' %}"> 
+</head>
+<body>
+
+    <nav>
+        <p>Acesso em: {{ now }}</p>
+    </nav>
+
+    <h1>Lista de audiências</h1>
+
+    <div id="formulario">
+
+    {% for agenda in agenda %}
+
+        <p>
+        <a href="{% url 'editar' agenda.id %}">ID: {{ agenda.id }}</a><br>
+        Cliente: <b>{{ agenda.nome }}</b><br>
+        Responsável: {{ agenda.responsavel }}<br>
+        Data da audiência: {{ agenda.dt_audiencia }}<br>
+        Classe: {{ agenda.classe }}<br><br>
+        </p>
+
+    {% endfor %}
+    
+    </div>
+
+    <a href="{% url 'cadastro' %}"><button>Adicionar agenda</button></a>
+
+
+</body>
+</html>

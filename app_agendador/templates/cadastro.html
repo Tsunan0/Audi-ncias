@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'app_agendador/css/cadastro.css' %}"> 
+
+</head>
+<body>
+    <h1>Página de cadastro</h1>
+
+    <h2>Novo agendamento</h2>
+
+<form action="{% url 'update' %}" method="post">
+    {% csrf_token %}
+    <div id="formulario">
+        <label><br>Cliente:  </label>
+        <input type="text" name="nome">
+
+        <label><br><br>Responsável:  </label>
+        <select name="responsavel"> 
+            <option value="Brendon">Brendon</option> 
+            <option value="Raphaela">Raphaela</option> 
+        </select>
+
+        <label><br><br>Data da audiência:  </label>
+        <input type="date" name="dt_audiencia">
+
+        <label><br><br>Classe:  </label>
+        <select name="classe"> 
+            <option value="Penal">Penal</option> 
+            <option value="Trabalhista">Trabalhista</option> 
+            <option value="Civil">Civil</option> 
+        </select>
+        <p></p>
+        <input class="botao" type="submit">
+    </div>
+</form>
+
+
+</body>
+</html>
